@@ -4,6 +4,11 @@ from backend.routes.simulator import router as simulator_router
 
 app = FastAPI(title="СКРРСС Симулятор")
 
+
+@app.get("/")
+def heal_check():
+    return {"status": "я родился"}
+
 @app.on_event("startup")
 def startup():
     init_db()

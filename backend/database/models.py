@@ -22,10 +22,8 @@ def init_db():
         user_id TEXT PRIMARY KEY,
         selected_band TEXT,
         selected_topology TEXT,
-        console1_config JSONB,
-        console2_config JSONB,
-        antenna1_config JSONB,
-        antenna2_config JSONB,
+        console_configs JSONB,
+        antenna_configs JSONB,
         created_at TIMESTAMP DEFAULT NOW(),
         updated_at TIMESTAMP DEFAULT NOW()
     );

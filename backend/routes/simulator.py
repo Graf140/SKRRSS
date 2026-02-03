@@ -75,6 +75,7 @@ async def api_configure_antenna(
 
     return configure_antenna(user_id, antenna_id, ip, mask)
 
+
 @router.get("/web/antenna/{user_id}/{antenna_id}", response_class=HTMLResponse)
 async def web_antenna_page(request: Request, user_id: str, antenna_id: str):
     check = can_access_antenna_web(user_id, antenna_id)
